@@ -1,9 +1,9 @@
 
 
-function getDate(props) {
-    if(!props){
+function GetDate(props) {
+    if(!props.timeCreated){
         console.log("no props");
-       return <div></div>
+       return "no time"
     }
     const findDate = props.timeCreated;
   /* console.log(serverdata); */
@@ -14,5 +14,5 @@ function getDate(props) {
   return theDate
 }
 
-export default getDate;
+export default GetDate;
 

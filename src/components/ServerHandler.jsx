@@ -19,7 +19,7 @@ function ServerHandler(props) {
   return (
    <article className="server" id={server.id}>
      <div className="res-animation-wrapper">
-       <ResAnimation></ResAnimation>
+        <ResAnimation></ResAnimation> 
      </div>
      <h2 className="server-lastresponsetime" data-field="response">{server.lastresponsetime} ms</h2>
    
