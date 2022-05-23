@@ -3,11 +3,15 @@
     max-width: 100%;
     font-size: 1vw;
     margin: 0;
+    height: fit-content;
+     width: fit-content; 
+    /* box-sizing: border-box; */
 }
 
 body{
     width: 100vw;
-    background-color: rgb(58, 58, 58);
+    // background-color: rgb(58, 58, 58);
+    background-color: v.$black;
     height: 90vh;
 
 #root{
@@ -25,13 +29,12 @@ body{
     height: 100%;
     display: grid;
     grid-gap: 1vw;
-grid-template-columns: 3fr 2fr;
-grid-template-rows: 20% 80%;
-background-color: rgb(58, 58, 58);
+grid-template-columns: 4fr 2fr;
+grid-template-rows: 40% 60%;
+// background-color: rgb(58, 58, 58);
+background-color: v.$black;
 }
 .server-container{
-
-  
     grid-row: 1/3;
     /* width: 98%; */
     /* height: 100%; */
@@ -44,25 +47,81 @@ background-color: rgb(58, 58, 58);
 }
 
 .server{
-    border-radius: 10px;
-    overflow: hidden; //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    text-align: center;
-    height: auto;
-    padding: 1vw;
-     width:12vw;
-    height: 12vw; 
-    background-color: rgb(66, 66, 66);
-    .server-status{}
-    .server-name{}
-    .server-hostname{}
-    .server-type{}
-    .server-lastresponsetimesponsetime{}
-    .server-resolution{}
-    .server-resolution{}
+    width: 13vw;
+    height: 13vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    border-radius: 0.9vw;
+   /*  overflow: hidden; */ //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // background-color: rgb(66, 66, 66);
+    background-color: v.$darkGray;
+.data-wrapper{
+     
+     width: inherit;
+    height: inherit; 
+        display: grid;
+         grid-template-columns: 1fr;
+        grid-template-rows: 1fr; 
+        z-index: 1000;
+        grid-area: 1/1;
+    .server-status{ 
+        grid-column: 1/2;
+        grid-row: 1/2;       
+    }
+    .server-created{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .server-name{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        
+    }
+    .server-hostname{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        
+    }
+    .server-type{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        
+    }
+    .server-lastresponsetime{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        
+    }
+    .server-resolution{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        
+        top: 0;
+        left: 0;
+        /* grid-area: 1/1; */
+        
+    }
 
+        // .bottom-box{
+        //     width: 100%;
+        //     height: 100%;
+        //     background-image: url(".../public/assets/wave.svg");
+        //     background-size: cover;
+        // }
+
+            
+        
+}
     .res-animation-wrapper{
-        width: 100%;
-                height: 100%;
+      /*   margin: 1vw; */
+        position: relative;
+        z-index: 1050;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        width: 4vw;
+        height: 4vw;
+        margin: auto;
         .res-animation{
             width: 100%;
                 height: 100%;
@@ -79,34 +138,37 @@ background-color: rgb(58, 58, 58);
                 }
             .outer-cirkel{
 
-     z-index: 10;
+                z-index: 10;
                 animation-name: spinning;
                
                 animation: spinning 1s reverse infinite linear;
                 
-                background:conic-gradient(from 40deg, blue, rgb(106, 106, 106) 10%);
+                background:conic-gradient(from 40deg, rgba(0, 0, 255, 0.279), rgb(106, 106, 106) 10%);
                 align-self: center;
                 border-radius: 50%;
                 width: 100%;
                 height: 100%;
                 grid-column: 1/2;
                 grid-row: 1/2;
-                background-color: red;
+                opacity: 100%;
+                border: solid 0.2vw black;
+               /*  background-color: red; */
                 img{}
             }
             .inner-cirkel{
+               
                 z-index: 1000;
                 box-shadow: inset 0 0 10px #0000009c;
                 border-radius: 50%;
-                width: 90%;
-                height: 90%;
+                width: 97%;
+                height: 97%;
                 grid-column: 1/2;
                 grid-row: 1/2;
-                background-color: rgb(58, 58, 58);
+                background-color: v.$darkGray;
                 img{}
                 align-self: center;
             }
-            .half-cirkel{
+           /*  .half-cirkel{
                 align-self: start;
                 width: 85%;
                 height: 45%;
@@ -116,11 +178,10 @@ background-color: rgb(58, 58, 58);
     border-top-left-radius: 20vw; 
     border-top-right-radius: 20vw;
     border: 10px solid gray;
-    border-bottom: 0;
-            }
+    border-bottom: 0; 
+            }*/
         }
     }
-
 }
 
 @keyframes spinning {
@@ -130,13 +191,20 @@ background-color: rgb(58, 58, 58);
 
 
 .weather-container{
-    background-color: rgb(66, 66, 66);
+
+    background-color: v.$darkGray;
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    border-radius: 0.9vw;
+    .ww_current{
+     margin: auto !important;
+    }
 }
 
 .calendar-container{
-    background-color: rgb(66, 66, 66);
+    // background-color: rgb(66, 66, 66);
+    background-color: v.$darkGray;
     width: 100%;
     height: 100%;
 }
