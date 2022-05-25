@@ -54,7 +54,7 @@ function App() {
       {/* <Dashboard checksData={checksHandled}/> */}
       <DashboardView checksData={checksHandled}></DashboardView>
       {/* <Weather/> */}
-      {/* <Calendar/> */}
+     {/*  { <Calendar/> } */}
       {/* <Login/> */}
     </div>
   )

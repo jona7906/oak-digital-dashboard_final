@@ -3,6 +3,7 @@ import StatusIcon from "../modules/StatusIcon";
 import PostResData from '../modules/PostResData';
 import ServerHandler from "./ServerHandler"
 import Weather from "./Weather"
+import Calendar from "./Calendar"
 
 import { useState, useEffect, useRef } from 'react';
 function DashboardView(props) {
@@ -24,7 +25,9 @@ setServerData(props.checksData)
       <div className="weather-container">
          <Weather/>
          </div>
-      <div className="calendar-container"></div>
+      <div className="calendar-container">
+         <Calendar/>
+         </div>
       <div className="server-container"> {serverData.map((server)=><ServerHandler data={server}/>)}</div>
       </div>  
       )
