@@ -5,7 +5,8 @@ function CalendarData() {
         bookings: [
           {
             date: "23/05",
-            monday: [
+            day: "Monday",
+            info: [
               {
                 company: "Oak Digital",
                 time: "9.30 - 10.30",
@@ -36,7 +37,8 @@ function CalendarData() {
 
           {
             date: "24/05",
-            tuesday: [
+            day: "Tuesday",
+            info: [
               {
                 company: "Oak Digital",
                 time: "9.00 - 9.45",
@@ -57,7 +59,8 @@ function CalendarData() {
 
           {
             date: "25/05",
-            wednesday: [
+            day: "Wednesday",
+            info: [
               {
                 company: "Oak Digital",
                 time: "10.00 - 11.00",
@@ -82,7 +85,8 @@ function CalendarData() {
           },
           {
             date: "26/05",
-            thursday: [
+            day: "Thursday",
+            info: [
               {
                 company: "Adgora",
                 time: "10.00 - 10.30",
@@ -102,7 +106,8 @@ function CalendarData() {
           },
           {
             date: "27/05",
-            friday: [
+            day: "Friday",
+            info: [
               {
                 company: "Oak Digital",
                 time: "10.00 - 11.00",
@@ -117,7 +122,8 @@ function CalendarData() {
           },
           {
             date: "28/05",
-            saturday: [
+            day: "Saturday",
+            info: [
               {
                 company: "Hangover",
                 time: "14.00 - 15.00",
@@ -127,7 +133,8 @@ function CalendarData() {
           },
           {
             date: "29/05",
-            sunday: [
+            day: "Sunday",
+            info: [
               {
                 company: "Hangover",
                 time: "12.00 - 13.00",
@@ -143,7 +150,8 @@ function CalendarData() {
         bookings: [
           {
             date: "23/05",
-            monday: [
+            day: "Monday",
+            info: [
               {
                 company: "Adgora",
                 time: "10.00 - 11.00",
@@ -163,7 +171,8 @@ function CalendarData() {
           },
           {
             date: "24/05",
-            tuesday: [
+            day: "Tuesday",
+            info: [
               {
                 company: "Adgora",
                 time: "10.00 - 10.30",
@@ -178,7 +187,8 @@ function CalendarData() {
           },
           {
             date: "25/05",
-            wednesday: [
+            day: "Wednesday",
+            info: [
               {
                 company: "Hangover",
                 time: "12.00 - 13.00",
@@ -193,7 +203,8 @@ function CalendarData() {
           },
           {
             date: "26/05",
-            thursday: [
+            day: "Thursday",
+            info: [
               {
                 company: "Hangover",
                 time: "10.00 - 11.00",
@@ -213,7 +224,8 @@ function CalendarData() {
           },
           {
             date: "27/05",
-            friday: [
+            day: "Friday",
+            info: [
               {
                 company: "Hangover",
                 time: "11.00 - 12.00",
@@ -228,21 +240,24 @@ function CalendarData() {
           },
           {
             date: "28/05",
-            saturday: [],
+            day: "Saturday",
+            info: [],
           },
           {
             date: "28/05",
-            sunday: [],
+            day: "Sunday",
+            info: [],
           },
         ],
       },
     },
     {
-      Kitchen: {
+      "Kitchen": {
         bookings: [
           {
             date: "23/05",
-            monday: [
+            day: "Monday",
+            info: [
               {
                 company: "Lunch",
                 time: "12.00 - 13.00",
@@ -257,7 +272,8 @@ function CalendarData() {
           },
           {
             date: "24/05",
-            tuesday: [
+            day: "Tuesday",
+            info: [
               {
                 company: "Lunch",
                 time: "12.00 - 13.00",
@@ -272,7 +288,8 @@ function CalendarData() {
           },
           {
             date: "25/05",
-            wednesday: [
+            day: "Wednesday",
+            info: [
               {
                 company: "Oak Digital",
                 time: "9.00 - 10.00",
@@ -292,7 +309,8 @@ function CalendarData() {
           },
           {
             date: "26/05",
-            thursday: [
+            day: "Thursday",
+            info: [
               {
                 company: "Lunch",
                 time: "12.00 - 13.00",
@@ -307,7 +325,8 @@ function CalendarData() {
           },
           {
             date: "27/05",
-            friday: [
+            day: "Friday",
+            info: [
               {
                 company: "Adgora",
                 time: "10.00 - 11.00",
@@ -322,12 +341,14 @@ function CalendarData() {
           },
           {
             date: "28/05",
-            saturday: [],
+            day: "Saturday",
+            info: [],
           },
 
           {
             date: "29/05",
-            sunday: [],
+            day: "Sunday",
+            info: [],
           },
         ],
       },

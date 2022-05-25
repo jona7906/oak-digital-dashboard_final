@@ -1,27 +1,31 @@
 @use "/src/styles/variables" as v;
-*{
+* {
+    font-family: v.$bold;
     max-width: 100%;
     font-size: 1vw;
     margin: 0;
     height: fit-content;
-     width: fit-content; 
+    width: fit-content; 
     /* box-sizing: border-box; */
 }
 
-body{
+body {
     width: 100vw;
     background-color: v.$black;
     height: 90vh;
-    // background-image: url(https://images.unsplash.com/photo-1586020435958-8298e2cb5f64?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687);
-    // background-size: inherit;
+    background-image: url(https://images.unsplash.com/photo-1578662996442-48f60103fc96?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170);
 
-#root{
-    height: 90%;
+#root {
+    height: 100%;
     /* height: auto; */
 }
-.App{
+.App {
     height: 100%;
     width: 100%;
+}
+
+header {
+    margin: auto;
 }
 
 header nav {
@@ -44,7 +48,7 @@ header nav {
 grid-template-columns: 4fr 2fr;
 grid-template-rows: 40% 60%;
 // background-color: rgb(58, 58, 58);
-background-color: v.$black;
+// background-color: v.$black;
 }
 .server-container{
     grid-row: 1/3;
@@ -56,6 +60,9 @@ background-color: v.$black;
     grid-gap: 1.5vw;
     justify-content: space-around;
   /*   align-content: center; */
+  border-radius: 0.9vw;
+    padding: 3vw;
+    background-color: #2a2e31a6;
 }
 
 .server{
@@ -67,7 +74,9 @@ background-color: v.$black;
     border-radius: 0.9vw;
     overflow: hidden; //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     // background-color: rgb(66, 66, 66);
-    background-color: v.$darkGray;
+    // background-color: v.$darkGray;
+    backdrop-filter: blur(40px);
+    box-shadow: 3px 3px 10px 3px rgb(0 0 0 / 31%);
 .data-wrapper{
         color: white;
         width: inherit;
@@ -242,7 +251,6 @@ background-color: v.$black;
 
 
 .weather-container{
-
     background-color: v.$darkGray;
     width: 100%;
     height: 100%;
@@ -266,32 +274,52 @@ background-color: v.$black;
 }
 
 .calendar-container{
-    // background-color: rgb(66, 66, 66);
-    background-color: v.$darkGray;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
     border-radius: .9vw;
+    background-color: #2a2e31a6;
+
+    .calendar-wrapper{
+        padding: 0 10%;
+    }
 
     h1 {
         color: white;
-        font-size: 1.5rem;
+        font-size: 2rem;
         margin-top: 10px;
     }
 
     h2 {
         color: white;
-        font-size: 0.7rem;
-        margin-top: 10px;
+        font-size: 1.5rem;
+        justify-self: start;
+    }
+
+    h3 {
+        color: rgb(0, 166, 172);
+        font-size: .8rem;
+        justify-self: end;
+    }
+
+    .calendar-booking{
+        position: absolute;
+        z-index: 999;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 20px;
+        align-items: center;
+        .bigRoom,
+        .smallRoom,
+        .kitchen {
+            gap: 20px;
+            display: flex;
+            align-items: center;
+            .booking{
+                display: flex;
+            }
+        }
     }
 }
 
 
 
-.calendar-booking{
-    position: absolute;
-    z-index: 999;
-    // width: 10vw;
-    // height: 10vw;
-}
