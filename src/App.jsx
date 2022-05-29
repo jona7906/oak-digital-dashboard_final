@@ -2,9 +2,7 @@ import dataHandler from "./modules/dataHandler"
 import { useState, useEffect, useRef } from 'react';
 import "./styles/App.scss"
 
-import Dashboard from './components/Dashboard';
 import DashboardView from './components/DashboardView';
-
 
 import Header from './components/Header';
 import Login from './components/Login';
@@ -51,7 +49,6 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      {/* <Dashboard checksData={checksHandled}/> */}
       <DashboardView checksData={checksHandled}></DashboardView>
       {/* <Weather/> */}
      {/*  { <Calendar/> } */}

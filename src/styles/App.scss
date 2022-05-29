@@ -1,10 +1,11 @@
 @use "/src/styles/variables" as v;
+@import "/src/styles/mixins.scss";
+
+
 * {
-    font-family: v.$bold;
+    font-family: v.$regular;
     max-width: 100%;
-    font-size: 1vw;
     margin: 0;
-    height: fit-content;
     width: fit-content; 
     /* box-sizing: border-box; */
 }
@@ -42,18 +43,20 @@ header nav {
 .dashboard-container{
     padding: 1vw;
     width: 98%;
-    height: 100%;
     display: grid;
     grid-gap: 1vw;
-grid-template-columns: 4fr 2fr;
-grid-template-rows: 40% 60%;
-// background-color: rgb(58, 58, 58);
-// background-color: v.$black;
+    grid-template-columns: 4fr 2fr;
+    @include for-phone-only {
+        display: flex;
+        flex-direction: column;
+        width: 98vw;
+        align-items: center;
+        margin-top: 30px;
+    }
 }
 .server-container{
     grid-row: 1/3;
-    /* width: 98%; */
-    /* height: 100%; */
+
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   /*  padding: 1vw; */
@@ -63,6 +66,10 @@ grid-template-rows: 40% 60%;
   border-radius: 0.9vw;
     padding: 3vw;
     background-color: #2a2e31a6;
+    @include for-phone-only {
+        grid-template-columns: 1fr 1fr;
+        order: -1;
+    }
 }
 
 .server{
@@ -77,6 +84,14 @@ grid-template-rows: 40% 60%;
     // background-color: v.$darkGray;
     backdrop-filter: blur(40px);
     box-shadow: 3px 3px 10px 3px rgb(0 0 0 / 31%);
+    font-size: 0.6vw;
+    @include for-phone-only {
+        height: 45vw;
+        width: 46.5vw;
+        font-size: 0.5rem;
+
+    }
+
 .data-wrapper{
         color: white;
         width: inherit;
@@ -165,11 +180,11 @@ grid-template-rows: 40% 60%;
             align-self: flex-end;
             grid-column: 1/2;
         grid-row: 1/2;
-            /* background-color: antiquewhite; */
+        @include for-phone-only {
+            height: 18vw;
         }
-
-            
-        
+            /* background-color: antiquewhite; */
+        }     
 }
 
 
@@ -184,6 +199,10 @@ grid-template-rows: 40% 60%;
         height: 4.9vw;
         top: 9%;
         margin: auto;
+        @include for-phone-only {
+            width: 12.9vw;
+            height: 12.9vw;
+        }
         .res-animation{
             width: 100%;
             height: 100%;
@@ -228,18 +247,6 @@ grid-template-rows: 40% 60%;
                 img{}
                 align-self: center;
             }
-           /*  .half-cirkel{
-                align-self: start;
-                width: 85%;
-                height: 45%;
-                grid-column: 1/2;
-                grid-row: 1/2;
-   background-color: gold;
-    border-top-left-radius: 20vw; 
-    border-top-right-radius: 20vw;
-    border: 10px solid gray;
-    border-bottom: 0; 
-            }*/
         }
     }
 }
@@ -253,23 +260,30 @@ grid-template-rows: 40% 60%;
 .weather-container{
     background-color: v.$darkGray;
     width: 100%;
-    height: 100%;
     overflow: hidden;
     border-radius: 0.9vw;
+    order: 3;
     .ww_current{
      margin: auto !important;
     }
 
     #ww_93705570411b1 {
     max-width: 31.5vw;
+    height: 100%;
+    @include for-phone-only {
+        max-width: 100%;
+    }
     .ww_line {
         margin: 0;
+        overflow: visible;
     }
  
     }
     .ww-box {
-        height: 30vw;
         width: auto;
+        .ww_name{
+            margin: 10px auto !important;
+        }
     }
 }
 
@@ -280,7 +294,11 @@ grid-template-rows: 40% 60%;
     background-color: #2a2e31a6;
 
     .calendar-wrapper{
-        padding: 0 10%;
+        width: 100%;
+
+        .todaysDate{
+            margin: auto;
+        }
     }
 
     h1 {
@@ -291,32 +309,56 @@ grid-template-rows: 40% 60%;
 
     h2 {
         color: white;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         justify-self: start;
+        margin: 10px auto;
     }
 
     h3 {
-        color: rgb(0, 166, 172);
-        font-size: .8rem;
+        // color: #FB695B;
+        font-size: 1.2rem;
         justify-self: end;
+        margin-left: 20px;
     }
 
+    
+
+    
+
     .calendar-booking{
-        position: absolute;
         z-index: 999;
         display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
         gap: 20px;
         align-items: center;
+        margin: 20px auto 40px auto;
+
         .bigRoom,
         .smallRoom,
         .kitchen {
-            gap: 20px;
-            display: flex;
             align-items: center;
+            width: 100%;
+    
+            div:nth-child(1) {
+                color: v.$blue;
+            }
+            div:nth-child(2) {
+                color: v.$red;
+            }
+            div:nth-child(3) {
+                color: v.$green;
+            }
+            
             .booking{
                 display: flex;
             }
+        }
+        .kitchen div:first-child {
+            color: white;
+        }
+
+        .schedule {
+            display: flex;
+            flex-direction: column;
         }
     }
 }

@@ -20,45 +20,29 @@ function ServerHandler(props) {
 
     function changeBottomBox(status){
         let boxImg = {};
-        
         if(status === ""){
-
           boxImg = {
              backgroundImage: `url("/assets/wave.svg")`,
           }
-
         return boxImg
       }  
       
       if(status === "paused"){
-
         boxImg = {
            backgroundImage: `url("/assets/paused-wave.svg")`
         }
-
       return boxImg
     }
 
       if(status === "down"){
-        
         boxImg = {
            backgroundImage: `url("/assets/down-wave.svg")`
         }
-
       return boxImg
+      }
     }
 
-
-      }
-      //    if(server.lastresponsetime <= 200) {
-      //    this.style.color = "green";
-      // } 
-      //    else if(server.lastresponsetime < 1000 && server.lastresponsetime > 200) {
-      //    this.style.color = "yellow";
-      // } 
-      //    else if(server.lastresponsetime >= 1000){
-      //    this.style.color = "red";
-      // }
+      
 
   return (
    <article className="server" id={server.id}>
