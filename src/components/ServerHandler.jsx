@@ -26,8 +26,11 @@ function ServerHandler(props) {
         if(status === "up"){
 
           boxImg = {
+           /*  alignSelf: "end",
+            justifySelf: "baseline",
+            width: `${server.lastresponsetime/10}vw`, */
              backgroundImage: `url("/assets/wave.svg")`,
-            /*   backgroundSize: `${server.lastresponsetime/10}vw`,
+          /*    backgroundSize: `cover 1000px 1000px`,
               backgroundRepeat: "no-repeat", */
           }
 
