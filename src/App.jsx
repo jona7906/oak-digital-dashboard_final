@@ -35,6 +35,7 @@ function App() {
       checksHandled = [...dataHandler(serverChecks)];
      /*  console.log("serverHandled", checksHandled); */
   }
+
 /* //the useRef Hook allows you to persist data between renders
   const prevCountRef = useRef();
   useEffect(() => {
@@ -46,10 +47,14 @@ function App() {
 //  console.log("counts: ", fullData.counts) 
     
 
+
   return (
     <div className="App">
+      {/* <video autoPlay muted loop id="myVideo">
+        <source src="/videos/background.mp4" type="video/mp4"></source>
+      </video> */}
       <Header/>
-      <DashboardView checksData={checksHandled}></DashboardView>
+      <DashboardView checksData={checksHandled} /* calendarData={day} */></DashboardView>
       {/* <Weather/> */}
      {/*  { <Calendar/> } */}
       {/* <Login/> */}

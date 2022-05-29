@@ -26,7 +26,34 @@ function dataHandler(dataArr) {
 
  let serverData = [...dataArr];
  serverData.push(downTestServer);
-  return serverData
+
+
+
+
+ function sortServers(serverArr){
+  /*  console.log(serverArr) */
+  /* serverArr.sort((a, b) => b["lastresponsetime"] - a["lastresponsetime"]);
+   */
+  let serverList = [...serverArr];
+  let sortedServers = serverList.sort((a, b) => b["lastresponsetime"] - a["lastresponsetime"]);
+ /*  console.log(sortedServers);
+ */
+  let pausedServers = sortedServers.filter(server => server.status.includes("paused"));
+
+  let upServers = sortedServers.filter(server => server.status.includes("up"));
+  let downServers = sortedServers.filter(server => server.status.includes("down"));
+  sortedServers = downServers.concat(pausedServers).concat(upServers)
+
+  /* console.log(pausedServers) */
+
+  return sortedServers
+ }
+
+ let sorted = sortServers(serverData);
+
+
+
+  return sorted
 
   
 }

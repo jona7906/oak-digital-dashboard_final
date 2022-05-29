@@ -17,8 +17,28 @@ function DashboardView(props) {
  
  useEffect(() => {
 setServerData(props.checksData)
-}, [props]);
+}, [props.checksData]);
 
+/* const [day, setDay] = useState(0);
+ 
+useEffect(() => {
+   setDay(props.calendarData)
+   }, [props.calendarData]); */
+
+   const [day, setDay] = useState(0);
+    useEffect(() => {
+      const updateDay = () => {
+     /*   if(day<3){} */
+     if(day<5){
+        setDay(day + 1)
+      /*   if(day>=3){
+          setDay(0)
+        } */}else{setDay(0)}
+      }
+   
+      const interval = setInterval(updateDay, 1000);
+      return () => clearInterval(interval);
+    }, [props]);
 
     return (
       <div className="dashboard-container">
@@ -26,7 +46,7 @@ setServerData(props.checksData)
          <Weather/>
          </div>
       <div className="calendar-container">
-         <Calendar/>
+         <Calendar calendarDay={day}/>
          </div>
       <div className="server-container"> {serverData.map((server)=><ServerHandler data={server}/>)}</div>
       </div>  
