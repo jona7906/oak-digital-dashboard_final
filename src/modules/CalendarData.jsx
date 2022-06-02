@@ -291,14 +291,14 @@ function CalendarData() {
             day: "Wednesday",
             info: [
               {
-                company: "Oak Digital",
-                time: "9.00 - 10.00",
-                note: "Danske Spil status",
-              },
-              {
                 company: "Lunch",
                 time: "12.00 - 13.00",
                 note: "Frokostpause",
+              },
+              {
+                company: "Oak Digital",
+                time: "13.00 - 14.00",
+                note: "Danske Spil status",
               },
               {
                 company: "Oak Digital",
@@ -328,15 +328,15 @@ function CalendarData() {
             day: "Friday",
             info: [
               {
-                company: "Adgora",
-                time: "10.00 - 11.00",
-                note: "Status møde",
-              },
-              {
                 company: "Lunch",
                 time: "12.00 - 13.00",
                 note: "Frokostpause",
               },
+              {
+                company: "Adgora",
+                time: "13.30 - 14.30",
+                note: "Status møde",
+              }
             ],
           },
           {

@@ -17,9 +17,15 @@ function Calendar(props){
  console.log(calendar[0]["Small Room"].bookings[0].info);  */
 
  let calendar = CalendarData()
+
+ let calendarAnimation = {
+    animation: `slideIn 2s 1 ease-in foward`
+    
+   /*  background: `conic-gradient(from 180deg, rgb(251,105,91), rgb(251,105,90, 0.279) 100%)` */,   
+ }
  return(
      <div className="calendar-wrapper">
-     <div className="todaysDate">
+     <div style={calendarAnimation} className="todaysDate">
          <h1>{calendar[0]["Big room"].bookings[props.calendarDay].day} {calendar[0]["Big room"].bookings[props.calendarDay].date}</h1>
          </div>
      
@@ -29,7 +35,6 @@ function Calendar(props){
             <div className="schedule">
       {calendar[0]["Big room"].bookings[props.calendarDay].info.map((booking)=>
         <div className="booking">
-       {/*  {console.log(booking)} */}
         <h3>{booking.time}: {booking.company} | {booking.note}</h3>
         </div>
     )}
@@ -41,7 +46,6 @@ function Calendar(props){
         <div className="schedule">
       {calendar[1]["Small Room"].bookings[props.calendarDay].info.map((booking)=>
         <div className="booking">
-        {/* {console.log(booking)} */}
         <h3>{booking.time}: {booking.company} | {booking.note}</h3>
         </div>
     )}
@@ -53,7 +57,6 @@ function Calendar(props){
         <div className="schedule">
       {calendar[2]["Kitchen"].bookings[props.calendarDay].info.map((booking)=>
         <div className="booking">
-       {/*  {console.log(booking)} */}
         <h3>{booking.time}: {booking.company} | {booking.note}</h3>
         </div>
     )}

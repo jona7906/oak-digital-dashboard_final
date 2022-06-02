@@ -18,8 +18,14 @@
       @content;
     }
   }
+  
+  @mixin small-big-screen {
+    @media (min-width: 1900px) {
+      @content;
+    }
+  }
   @mixin big-screen {
-    @media (min-width: 2000px) {
+    @media (min-width: 3800px) {
       @content;
     }
   }

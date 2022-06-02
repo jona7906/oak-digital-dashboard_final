@@ -69,7 +69,7 @@ function ServerHandler(props) {
 
       function responseTimeHandler(res, status){
       if(status === "up"){
-      return <h2> {res}ms</h2>;
+      return <h2> {res} ms</h2>;
       }if(status === "down"){
         return <img src="/assets/down-icon.svg" alt="" />;
       }
