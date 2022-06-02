@@ -11,7 +11,7 @@ function DashboardView(props) {
     return <div><LoadingScreen></LoadingScreen></div>
  }
 
- const [serverData, setServerData] = useState([]); // Set rowData to Array of Objects, one Object per Row
+ const [serverData, setServerData] = useState([]);
  
  useEffect(() => {
 setServerData(props.checksData)
@@ -26,9 +26,9 @@ setServerData(props.checksData)
       }else{setDay(0)}
       }
    
-      const interval = setInterval(updateDay, 1000);
+      const interval = setInterval(updateDay, 5000);
       return () => clearInterval(interval);
-    }, [props]);
+    }, [day]);
 
     return (
       <div className="dashboard-container">
