@@ -1,6 +1,4 @@
 import LoadingScreen from "../modules/LoadingScreen";
-import StatusIcon from "../modules/StatusIcon";
-import PostResData from '../modules/PostResData';
 import ServerHandler from "./ServerHandler"
 import Weather from "./Weather"
 import Calendar from "./Calendar"
@@ -19,21 +17,13 @@ function DashboardView(props) {
 setServerData(props.checksData)
 }, [props.checksData]);
 
-/* const [day, setDay] = useState(0);
- 
-useEffect(() => {
-   setDay(props.calendarData)
-   }, [props.calendarData]); */
 
    const [day, setDay] = useState(0);
     useEffect(() => {
       const updateDay = () => {
-     /*   if(day<3){} */
      if(day<5){
         setDay(day + 1)
-      /*   if(day>=3){
-          setDay(0)
-        } */}else{setDay(0)}
+      }else{setDay(0)}
       }
    
       const interval = setInterval(updateDay, 1000);

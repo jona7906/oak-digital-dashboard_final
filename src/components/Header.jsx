@@ -1,12 +1,11 @@
-import DropdownType from './DropdownType.jsx'
-import DropdownTime from './DropdownTime.jsx'
+
 import "../styles/App.scss"
 
  
 
 function Header() {
  
-/* console.log(event) */
+
   return (
    <header>
        <nav>
@@ -27,8 +26,7 @@ function Header() {
         </svg>
 
          <div className="dropdownmenu">
-          {/* <DropdownType/> */}
-          {/* <DropdownTime/> */}
+        
          </div>
        </nav>
    </header>

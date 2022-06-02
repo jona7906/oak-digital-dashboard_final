@@ -3,7 +3,6 @@ import LoadingScreen from "../modules/LoadingScreen";
 import ResAnimation from "../modules/ResAnimation"
 import { useState, useEffect, useRef } from 'react';
 import GetDate from "../modules/GetDate"
-/* import Wave from ".assets/wave.svg" */
 
 
 function ServerHandler(props) {
@@ -26,12 +25,9 @@ function ServerHandler(props) {
         if(status === "up"){
 
           boxImg = {
-           /*  alignSelf: "end",
-            justifySelf: "baseline",
-            width: `${server.lastresponsetime/10}vw`, */
+          
              backgroundImage: `url("/assets/wave.svg")`,
-          /*    backgroundSize: `cover 1000px 1000px`,
-              backgroundRepeat: "no-repeat", */
+        
           }
 
         return boxImg
@@ -60,16 +56,7 @@ function ServerHandler(props) {
 
 
       }
-      //    if(server.lastresponsetime <= 200) {
-      //    this.style.color = "green";
-      // } 
-      //    else if(server.lastresponsetime < 1000 && server.lastresponsetime > 200) {
-      //    this.style.color = "yellow";
-      // } 
-      //    else if(server.lastresponsetime >= 1000){
-      //    this.style.color = "red";
-      // }
-
+  
       function responseTimeHandler(res, status){
       if(status === "up"){
       return <h2> {res} ms</h2>;

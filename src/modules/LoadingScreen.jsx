@@ -1,7 +1,7 @@
 import "../styles/Loading.scss"
 
 function LoadingScreen() {
-  /* console.log(event) */
+ 
   return (
     <section id="loadingSection">
       <div className="contentWrapper">

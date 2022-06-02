@@ -4,7 +4,7 @@ function GetDate(props) {
     return "no time";
   }
   const findDate = props.timeCreated;
-  /* console.log(serverdata); */
+ 
   const timestamp = new Date(findDate * 1000);
 
   let theDate = new Intl.DateTimeFormat("da-DK", { year: "numeric", month: "2-digit", day: "numeric" }).format(timestamp);
