@@ -1,13 +1,13 @@
 
 function dataHandler(dataArr) {
 
- const downTestServer = {
+ const testServer = {
     id: 100105299,
-     status: "down",
+     status: getRandomStatus(),
      name: "test server 1",
      hostname: "test server 1",
      type: "http",
-     lastresponsetime: 1000,
+     lastresponsetime: 100 + Math.floor(Math.random() * 1000),
      resolution: 1,
      created: 1633683779,
      lasterrortime: 1649827074,
@@ -16,10 +16,43 @@ function dataHandler(dataArr) {
      ipv6: false,
  }
 
+ const downTestServer = {
+  
+    id: 10010529123,
+    status: "down",
+    name: "test server 2",
+    hostname: "test server 2",
+    type: "http",
+    lastresponsetime: 100 + Math.floor(Math.random() * 1000),
+    resolution: 1,
+    created: 1633683779,
+    lasterrortime: 1649827074,
+    lastdownstart: 1649827042,
+    lastdownend: 1649827342,
+    ipv6: false,
+   
+ }
+ 
+
  let serverData = [...dataArr];
- serverData.push(downTestServer);
+ serverData.push(downTestServer, testServer);
 
+function getRandomStatus(){
+  let i = Math.floor(Math.random() * 2);
 
+  if(i === 0){
+    return "down"
+  };
+  if(i === 1){
+    return "up"
+  };
+  if(i === 2){
+    return "paused"
+  }else{
+    return "unknown"
+  }
+
+}
 
 
  function sortServers(serverArr){

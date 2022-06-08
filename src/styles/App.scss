@@ -465,3 +465,13 @@ header nav {
     // transform: translateX(-100%);
     opacity: 0;
   }
+
+
+  .warning-wrapper{
+      position: absolute;
+      background-color: green;
+      width: 50vw;
+      height: 50vw;
+      z-index: 999;
+
+  }
