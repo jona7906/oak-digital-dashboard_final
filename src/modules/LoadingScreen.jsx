@@ -1,6 +1,12 @@
 import "../styles/Loading.scss"
 
 function LoadingScreen() {
+
+  function removeLoader(){
+    document.querySelector(".loading").addEventListener("animationend", () => {
+      document.getElementById("loadingSection").style.display = "none";
+    })
+  }
  
   return (
     <section id="loadingSection">

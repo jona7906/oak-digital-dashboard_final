@@ -1,4 +1,4 @@
-
+import {useState, useEffect} from "react"
 function dataHandler(dataArr) {
 
  const testServer = {
@@ -28,14 +28,17 @@ function dataHandler(dataArr) {
     created: 1633683779,
     lasterrortime: 1649827074,
     lastdownstart: 1649827042,
-    lastdownend: 1649827342,
+    lastdownend: 1649327342,
     ipv6: false,
    
  }
  
 
+
  let serverData = [...dataArr];
  serverData.push(downTestServer, testServer);
+
+
 
 function getRandomStatus(){
   let i = Math.floor(Math.random() * 2);

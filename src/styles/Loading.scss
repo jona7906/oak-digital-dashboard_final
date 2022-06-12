@@ -10,7 +10,15 @@
   }
   
   #loadingSection {
+    position: absolute;
+    left: 0;
+    top: 0;
     height: 100vh;
+    width: 100vw;
+    z-index: 9999;
+    background-color: #010d16f4;
+    animation: disappear 3s 1 both;
+    backdrop-filter: blur(10px);
     .loading {
       font-family: system-ui;
       font-size: 6rem;
@@ -40,7 +48,18 @@
       }
     }
   }
-  
+
+  @keyframes disappear{
+    85% {
+      opacity: 1;
+      z-index: 9999;
+    }
+    100% {
+      opacity: 0;
+      z-index: -999;
+    }
+  }
+
   @keyframes loading {
     0% {
       filter: blur(5px);
@@ -62,7 +81,7 @@
   .path {
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
-    animation: dash 6s linear forwards;
+    animation: dash 5s linear forwards;
     opacity: 0;
     animation-delay: 0.7s;
   }

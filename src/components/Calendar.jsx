@@ -5,21 +5,11 @@ import {useEffect, useState} from "react"
  
 
 function Calendar(props){
-/*     const calendar = [...CalendarData()];
- console.log(calendar[0]["Big room"].bookings[0].date);
- console.log(calendar[0]["Big room"].bookings[0].day);
- console.log(calendar[0]["Big room"].bookings[0].info);
-     */
-/*  const [day, setDay] = useState(0); */
-/* 
- console.log(calendar[0]["Small Room"].bookings[0].date);
- console.log(calendar[0]["Small Room"].bookings[0].day);
- console.log(calendar[0]["Small Room"].bookings[0].info);  */
 
  let calendar = CalendarData()
 
  let calendarAnimation = {
-    animation: `slideIn 2s 1 ease-in foward`
+    animation: `2s 1 ease-in fowards slideIn`
     
    /*  background: `conic-gradient(from 180deg, rgb(251,105,91), rgb(251,105,90, 0.279) 100%)` */,   
  }

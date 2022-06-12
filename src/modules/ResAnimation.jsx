@@ -29,7 +29,7 @@ if(props.status==="down"){
   if(props.status==="paused"){
     spinningAnima = {
         animation: `spinning 0s infinite linear reverse`,
-        background: `conic-gradient(from 90deg, rgb(230,227,82), rgb(230,227,81, 0.279) 100%)`,
+        background: `conic-gradient(from 0deg, rgb(230,227,82), rgb(230,227,81, 0.279) 100%)`,
       }
       return spinningAnima;
     }
